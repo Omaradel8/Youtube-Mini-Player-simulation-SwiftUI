@@ -11,14 +11,20 @@
 		58DEF9232C61A69E00EACE90 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DEF9222C61A69E00EACE90 /* ContentView.swift */; };
 		58DEF9252C61A69F00EACE90 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58DEF9242C61A69F00EACE90 /* Assets.xcassets */; };
 		58DEF9282C61A69F00EACE90 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58DEF9272C61A69F00EACE90 /* Preview Assets.xcassets */; };
+		58DEF9312C61A6D100EACE90 /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DEF9302C61A6D100EACE90 /* Tab.swift */; };
+		58DEF9332C61A76900EACE90 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DEF9322C61A76900EACE90 /* Home.swift */; };
+		58DEF9362C61A80D00EACE90 /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DEF9352C61A80D00EACE90 /* ViewExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		58DEF91D2C61A69E00EACE90 /* Youtube Mini Player simiulation-SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Youtube Mini Player simiulation-SwiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		58DEF91D2C61A69E00EACE90 /* Youtube Mini Player simulation-SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Youtube Mini Player simulation-SwiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		58DEF9202C61A69E00EACE90 /* Youtube_Mini_Player_simiulation_SwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Youtube_Mini_Player_simiulation_SwiftUIApp.swift; sourceTree = "<group>"; };
 		58DEF9222C61A69E00EACE90 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		58DEF9242C61A69F00EACE90 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		58DEF9272C61A69F00EACE90 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		58DEF9302C61A6D100EACE90 /* Tab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
+		58DEF9322C61A76900EACE90 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		58DEF9352C61A80D00EACE90 /* ViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,7 +49,7 @@
 		58DEF91E2C61A69E00EACE90 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				58DEF91D2C61A69E00EACE90 /* Youtube Mini Player simiulation-SwiftUI.app */,
+				58DEF91D2C61A69E00EACE90 /* Youtube Mini Player simulation-SwiftUI.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -51,6 +57,9 @@
 		58DEF91F2C61A69E00EACE90 /* Youtube Mini Player simiulation-SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				58DEF9342C61A80000EACE90 /* Helpers */,
+				58DEF92F2C61A6BC00EACE90 /* View */,
+				58DEF92E2C61A6B700EACE90 /* Model */,
 				58DEF9202C61A69E00EACE90 /* Youtube_Mini_Player_simiulation_SwiftUIApp.swift */,
 				58DEF9222C61A69E00EACE90 /* ContentView.swift */,
 				58DEF9242C61A69F00EACE90 /* Assets.xcassets */,
@@ -67,12 +76,36 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		58DEF92E2C61A6B700EACE90 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				58DEF9302C61A6D100EACE90 /* Tab.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		58DEF92F2C61A6BC00EACE90 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				58DEF9322C61A76900EACE90 /* Home.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		58DEF9342C61A80000EACE90 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				58DEF9352C61A80D00EACE90 /* ViewExtensions.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		58DEF91C2C61A69E00EACE90 /* Youtube Mini Player simiulation-SwiftUI */ = {
+		58DEF91C2C61A69E00EACE90 /* Youtube Mini Player simulation-SwiftUI */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 58DEF92B2C61A69F00EACE90 /* Build configuration list for PBXNativeTarget "Youtube Mini Player simiulation-SwiftUI" */;
+			buildConfigurationList = 58DEF92B2C61A69F00EACE90 /* Build configuration list for PBXNativeTarget "Youtube Mini Player simulation-SwiftUI" */;
 			buildPhases = (
 				58DEF9192C61A69E00EACE90 /* Sources */,
 				58DEF91A2C61A69E00EACE90 /* Frameworks */,
@@ -82,9 +115,9 @@
 			);
 			dependencies = (
 			);
-			name = "Youtube Mini Player simiulation-SwiftUI";
+			name = "Youtube Mini Player simulation-SwiftUI";
 			productName = "Youtube Mini Player simiulation-SwiftUI";
-			productReference = 58DEF91D2C61A69E00EACE90 /* Youtube Mini Player simiulation-SwiftUI.app */;
+			productReference = 58DEF91D2C61A69E00EACE90 /* Youtube Mini Player simulation-SwiftUI.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -102,7 +135,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 58DEF9182C61A69E00EACE90 /* Build configuration list for PBXProject "Youtube Mini Player simiulation-SwiftUI" */;
+			buildConfigurationList = 58DEF9182C61A69E00EACE90 /* Build configuration list for PBXProject "Youtube Mini Player simulation-SwiftUI" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -115,7 +148,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				58DEF91C2C61A69E00EACE90 /* Youtube Mini Player simiulation-SwiftUI */,
+				58DEF91C2C61A69E00EACE90 /* Youtube Mini Player simulation-SwiftUI */,
 			);
 		};
 /* End PBXProject section */
@@ -137,7 +170,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58DEF9312C61A6D100EACE90 /* Tab.swift in Sources */,
 				58DEF9232C61A69E00EACE90 /* ContentView.swift in Sources */,
+				58DEF9332C61A76900EACE90 /* Home.swift in Sources */,
+				58DEF9362C61A80D00EACE90 /* ViewExtensions.swift in Sources */,
 				58DEF9212C61A69E00EACE90 /* Youtube_Mini_Player_simiulation_SwiftUIApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -325,7 +361,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		58DEF9182C61A69E00EACE90 /* Build configuration list for PBXProject "Youtube Mini Player simiulation-SwiftUI" */ = {
+		58DEF9182C61A69E00EACE90 /* Build configuration list for PBXProject "Youtube Mini Player simulation-SwiftUI" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				58DEF9292C61A69F00EACE90 /* Debug */,
@@ -334,7 +370,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		58DEF92B2C61A69F00EACE90 /* Build configuration list for PBXNativeTarget "Youtube Mini Player simiulation-SwiftUI" */ = {
+		58DEF92B2C61A69F00EACE90 /* Build configuration list for PBXNativeTarget "Youtube Mini Player simulation-SwiftUI" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				58DEF92C2C61A69F00EACE90 /* Debug */,
