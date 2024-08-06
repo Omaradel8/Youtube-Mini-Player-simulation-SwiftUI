@@ -15,6 +15,8 @@
 		58DEF9332C61A76900EACE90 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DEF9322C61A76900EACE90 /* Home.swift */; };
 		58DEF9362C61A80D00EACE90 /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DEF9352C61A80D00EACE90 /* ViewExtensions.swift */; };
 		58DEF9382C61AF6500EACE90 /* PlayerItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DEF9372C61AF6500EACE90 /* PlayerItem.swift */; };
+		58DEF93A2C61C7E600EACE90 /* PlayerConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DEF9392C61C7E600EACE90 /* PlayerConfig.swift */; };
+		58DEF93C2C61C8DC00EACE90 /* MiniPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DEF93B2C61C8DC00EACE90 /* MiniPlayerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +29,8 @@
 		58DEF9322C61A76900EACE90 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		58DEF9352C61A80D00EACE90 /* ViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtensions.swift; sourceTree = "<group>"; };
 		58DEF9372C61AF6500EACE90 /* PlayerItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerItem.swift; sourceTree = "<group>"; };
+		58DEF9392C61C7E600EACE90 /* PlayerConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerConfig.swift; sourceTree = "<group>"; };
+		58DEF93B2C61C8DC00EACE90 /* MiniPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniPlayerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +85,8 @@
 		58DEF92E2C61A6B700EACE90 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				58DEF9372C61AF6500EACE90 /* PlayerItem.swift */,
+				58DEF9392C61C7E600EACE90 /* PlayerConfig.swift */,
 				58DEF9302C61A6D100EACE90 /* Tab.swift */,
 			);
 			path = Model;
@@ -90,7 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				58DEF9322C61A76900EACE90 /* Home.swift */,
-				58DEF9372C61AF6500EACE90 /* PlayerItem.swift */,
+				58DEF93B2C61C8DC00EACE90 /* MiniPlayerView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -177,8 +183,10 @@
 				58DEF9232C61A69E00EACE90 /* ContentView.swift in Sources */,
 				58DEF9332C61A76900EACE90 /* Home.swift in Sources */,
 				58DEF9362C61A80D00EACE90 /* ViewExtensions.swift in Sources */,
+				58DEF93C2C61C8DC00EACE90 /* MiniPlayerView.swift in Sources */,
 				58DEF9212C61A69E00EACE90 /* Youtube_Mini_Player_simiulation_SwiftUIApp.swift in Sources */,
 				58DEF9382C61AF6500EACE90 /* PlayerItem.swift in Sources */,
+				58DEF93A2C61C7E600EACE90 /* PlayerConfig.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

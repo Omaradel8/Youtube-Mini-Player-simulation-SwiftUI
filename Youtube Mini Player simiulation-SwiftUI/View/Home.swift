@@ -11,6 +11,8 @@ struct Home: View {
     
     // VIEW PROPERTIES
     @State private var activeTab: Tab = .home
+    @State private var config: PlayerConfig = .init()
+    
     var body: some View {
         ZStack(alignment: .bottom) {
             TabView(selection: $activeTab) {
@@ -29,6 +31,16 @@ struct Home: View {
             .padding(.bottom, tabBarHeight)
             
             CustomTabBar()
+            
+            
+            /// Mini player view
+            GeometryReader {
+                let size = $0.size
+                
+                if config.showMiniPlayer {
+                    MiniPlayerView(size: size, config: $config)
+                }
+            }
         }
         .ignoresSafeArea()
     }
@@ -41,7 +53,10 @@ struct Home: View {
                 LazyVStack(spacing: 15) {
                     ForEach(items) { item in
                         PlayerItemCardView(item) {
-                            
+                            config.selectedPlayerItem = item
+                            withAnimation(.easeInOut(duration: 0.3)) {
+                                config.showMiniPlayer = true
+                            }
                         }
                     }
                 }
@@ -112,21 +127,21 @@ struct Home: View {
         .frame(height: tabBarHeight)
         .background(.background)
     }
-    
-    /// SafeArea Value
-    var safeArea: UIEdgeInsets {
-        if let safeArea = (UIApplication.shared.connectedScenes.first as? UIWindowScene)?.keyWindow?.safeAreaInsets {
-            return safeArea
-        }
-        
-        return .zero
-    }
-    
-    var tabBarHeight: CGFloat {
-        return 49 + safeArea.bottom
-    }
 }
 
 #Preview {
     ContentView()
+}
+
+/// SafeArea Value
+var safeArea: UIEdgeInsets {
+    if let safeArea = (UIApplication.shared.connectedScenes.first as? UIWindowScene)?.keyWindow?.safeAreaInsets {
+        return safeArea
+    }
+    
+    return .zero
+}
+
+var tabBarHeight: CGFloat {
+    return 49 + safeArea.bottom
 }
