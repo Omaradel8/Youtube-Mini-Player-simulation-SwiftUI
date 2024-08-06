@@ -30,8 +30,6 @@ struct Home: View {
             }
             .padding(.bottom, tabBarHeight)
             
-            CustomTabBar()
-            
             
             /// Mini player view
             GeometryReader {
@@ -41,6 +39,9 @@ struct Home: View {
                     MiniPlayerView(size: size, config: $config)
                 }
             }
+            
+            CustomTabBar()
+                .offset(y: config.showMiniPlayer ? tabBarHeight - (config.progress * tabBarHeight) : 0)
         }
         .ignoresSafeArea()
     }

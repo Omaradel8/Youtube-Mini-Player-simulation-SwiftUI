@@ -25,6 +25,7 @@ struct MiniPlayerView: View {
                     .onChanged({ value in
                         let height = config.lastPosition + value.translation.height
                         config.position = min(height, size.height - 50)
+                        generateProgress()
                     })
                     .onEnded({ value in
                         let velocity = value.velocity.height * 5
