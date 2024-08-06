@@ -14,7 +14,7 @@ struct Home: View {
     var body: some View {
         ZStack(alignment: .bottom) {
             TabView(selection: $activeTab) {
-                Text(Tab.home.rawValue)
+                HomeTabView()
                     .setupTab(.home)
                 
                 Text(Tab.shorts.rawValue)
@@ -31,6 +31,58 @@ struct Home: View {
             CustomTabBar()
         }
         .ignoresSafeArea()
+    }
+    
+    /// Home Tab View
+    @ViewBuilder
+    func HomeTabView() -> some View {
+        NavigationStack {
+            ScrollView(.vertical) {
+                LazyVStack(spacing: 15) {
+                    ForEach(items) { item in
+                        PlayerItemCardView(item) {
+                            
+                        }
+                    }
+                }
+                .padding(15)
+            }
+            .navigationTitle("Youtube")
+            .toolbarBackground(.visible, for: .navigationBar)
+            .toolbarBackground(.background, for: .navigationBar)
+        }
+    }
+    
+    /// Player Item Card View
+    @ViewBuilder
+    func PlayerItemCardView(_ item: PlayerItem, onTap: @escaping () -> ()) -> some View {
+        VStack(alignment: .leading, spacing: 6) {
+            Image(item.image)
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .frame(height: 170)
+                .clipShape(.rect(cornerRadius: 10))
+                .contentShape(.rect)
+                .onTapGesture{ onTap() }
+            
+            HStack(spacing: 10) {
+                Image(systemName: "person.circle.fill")
+                    .font(.title)
+                
+                VStack(alignment: .leading, spacing: 4) {
+                    Text(item.title)
+                        .font(.callout)
+                    
+                    HStack(spacing: 6) {
+                        Text(item.author)
+                        
+                        Text("' 2 Days Ago")
+                    }
+                    .font(.caption)
+                    .foregroundColor(.gray)
+                }
+            }
+        }
     }
     
     /// Custom Tab Bar
